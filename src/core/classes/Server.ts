@@ -9,6 +9,9 @@ import * as helmet from 'helmet';
 import * as compression from 'compression';
 import { json, urlencoded } from 'body-parser';
 
+/* routes */
+import IndexRouter from '../../routes/index';
+
 export default class Server {
     app: any;
     readonly port: number;
@@ -43,6 +46,21 @@ export default class Server {
         this.app.listen(this.port, () => {
             console.log(`App started on port ${this.port}`);
             this._ready = true;
+        });
+    }
+
+    loadRoutes() {
+        this.app.use(async (req, res, next) => {
+            res.locals.user = req.session.user || null;
+            res.locals.website = { name: 'Tickets' };
+
+            next();
+        });
+
+        this.app.use('/', IndexRouter);
+
+        this.app.use(async (req, res) => {
+            return res.status(404).send('<h1>404 Not Found</h1><br /><p>The requested page could not be found.</p>');
         });
     }
 }

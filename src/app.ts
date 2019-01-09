@@ -7,3 +7,4 @@ const app = express();
 const instance = new Server({ app, port });
 
 instance.start();
+instance.loadRoutes();
