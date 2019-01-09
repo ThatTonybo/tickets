@@ -17,7 +17,6 @@ Tickets | Accounts | Staff-side | Front-end | Back-end
 Tickets uses TypeScript, and must be compiled before being run. If you don't have the complier installed, do so with `npm i -g typescript` (you can skip this if needed). Once ready, run `npm start` to compile the source, and start the server.
 
 ## Contributing
-Contributions to Tickets would be greatly appreciated. If you wish to contribute anything, make a clone or fork, and PR your changes over when ready! :+1:  
-All contributions must follow our [contribution guide](#).
+Contributions to Tickets would be greatly appreciated. If you wish to contribute anything, make a clone or fork, and PR your changes over when ready!  
 
 Copyright (c) 2018 ThatTonybo. Licenced under the MIT Licence.

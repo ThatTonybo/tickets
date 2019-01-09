@@ -12,18 +12,17 @@
     <div id="area" class="navbar-menu">
         <div class="navbar-start">
             <% if (!locals.user) { %>
-                <a class="navbar-item">Login</a>
+                <a class="navbar-item" href="/login">Login</a>
+                <a class="navbar-item" href="/register">Register</a>
             <% } else { %>
-                <a class="navbar-item">Tickets</a>
+                <a class="navbar-item" href="/tickets">Tickets</a>
             <% } %>
         </div>
 
         <div class="navbar-end">
             <% if (!locals.user) { } else { %>
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Logged in
-                    </a>
+                    <a class="navbar-link">Logged in</a>
 
                     <div class="navbar-dropdown">
                         <a class="navbar-item" href="/logout?redirect=<%- locals.path %>">Logout</a>

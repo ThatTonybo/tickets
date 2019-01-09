@@ -9,11 +9,15 @@ import * as helmet from 'helmet';
 import * as compression from 'compression';
 import { json, urlencoded } from 'body-parser';
 
+import * as r from 'rethinkdbdash';
+
 /* routes */
 import IndexRouter from '../../routes/index';
+import AccountsRouter from '../../routes/accounts';
 
 export default class Server {
     app: any;
+    r: any;
     readonly port: number;
     _ready: boolean;
     
@@ -22,6 +26,8 @@ export default class Server {
         this.port = options.port || 80;
 
         this._ready = false;
+
+        this.r = r(options.db);
 
         this.app
             .set('view engine', 'ejs')
@@ -57,7 +63,8 @@ export default class Server {
             next();
         });
 
-        this.app.use('/', IndexRouter);
+        this.app.use('/', IndexRouter)
+            .use('/', AccountsRouter)
 
         this.app.use(async (req, res) => {
             return res.status(404).send('<h1>404 Not Found</h1><br /><p>The requested page could not be found.</p>');

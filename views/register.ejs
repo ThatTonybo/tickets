@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs'); %>
+<body>
+    <div class="container">
+        <%- include('partials/navbar.ejs'); %>
+
+        <br />
+
+        <h1 class="title">Register</h1>
+
+        <form method="POST">
+            <div class="field">
+                <label class="label">Username</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="cat" name="username" id="username" />
+                    <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+                    <p class="help">Your username must be unique, and between 4 to 16 characters.</p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="password" placeholder="********" name="password" id="password" />
+                            <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+                            <p class="help">At least 8 characters.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Confirm Password</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="password" placeholder="********" name="confirmPassword" id="confirmPassword" />
+                            <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+                            <p class="help">Enter your password again exactly how first entered.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control">
+                <button type="submit" class="button is-link">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

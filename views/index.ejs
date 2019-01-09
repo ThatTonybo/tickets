@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs'); %>
+<body>
+    <div class="container">
+        <%- include('partials/navbar.ejs'); %>
+
+        <br />
+
+        <h1 class="title"><%= locals.website.name %></h1>
+        <h2 class="subtitie">Please login to access this website. <a href="/register">Don't have an account?</a></h2>
+    </div>
+</body>
+</html>

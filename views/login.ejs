@@ -7,8 +7,29 @@
 
         <br />
 
-        <h1 class="title"><%= locals.website.name %></h1>
-        <h2 class="subtitie">Please login to access this website. <a href="/register">Don't have an account?</a></h2>
+        <h1 class="title">Login</h1>
+
+        <form method="POST">
+            <div class="field">
+                <label class="label">Username</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="cat" name="username" id="username" />
+                    <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Password</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="password" placeholder="********" name="password" id="password" />
+                    <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+                </div>
+            </div><br />
+
+            <div class="control">
+                <button type="submit" class="button is-link">Login</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
