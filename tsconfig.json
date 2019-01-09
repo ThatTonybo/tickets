@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "lib": [
+            "es2015"
+        ],
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "outDir": "./dist/"
+    },
+    "include": [
+        "./src",
+        "./src/views/***"
+    ],
+    "exclude": [
+        "./config.example.json"
+    ]
+}
