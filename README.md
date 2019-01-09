@@ -5,7 +5,7 @@ Tickets is a simple interface for online support tickets, usable for requests, s
 Tickets | Accounts | Staff-side | Front-end | Back-end
 --- | --- | --- | --- | ---
 ✗ Creation | ✗ Login and register | ✗ Viewing and replying | ✗ Something good? lol | ✗ API
-✗ Deletion | ✗ Settings | ✗ Tagging as solved/IP.. | Dark and light themes | ✗ Internal rate-limiting
+✗ Deletion | ✗ Settings | ✗ Tagging as solved/IP.. | ✗ Dark and light themes | ✗ Internal rate-limiting
 ✗ Replies (user and staff) | ✗ Logout | ✗ Filters | - | ✗ Webhooks
 ✗ Editing | ✗ Anonymous tickets? | ✗ Blocking users | - | -
 ✗ Extra utilities | - | ✗ Auto responses | - | -
