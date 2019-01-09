@@ -1,0 +1,35 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <b><%= locals.website.name %></b>
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="area">
+            <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="area" class="navbar-menu">
+        <div class="navbar-start">
+            <% if (!locals.user) { %>
+                <a class="navbar-item">Login</a>
+            <% } else { %>
+                <a class="navbar-item">Tickets</a>
+            <% } %>
+        </div>
+
+        <div class="navbar-end">
+            <% if (!locals.user) { } else { %>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Logged in
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/logout?redirect=<%- locals.path %>">Logout</a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</nav>
